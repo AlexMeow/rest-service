@@ -1,16 +1,19 @@
 package com.example.restservice.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "post")
-public class Post {
+@Table(name = "comment")
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "comment_id")
+    private Long commentId;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id")
     @Column(name = "post_id")
     private Long postId;
 
@@ -22,25 +25,23 @@ public class Post {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "img_url")
-    private String imgUrl;
-
     @Column(name = "created_at")
     private Date createdAt;
+
+    public Long getCommentId() {
+        return commentId;
+    }
 
     public Long getPostId() {
         return this.postId;
     }
+
     public Long getUserId() {
         return this.userId;
     }
 
     public String getContent() {
         return this.content;
-    }
-
-    public String getImgUrl() {
-        return this.imgUrl;
     }
 
     public Date getCreatedAt() {
