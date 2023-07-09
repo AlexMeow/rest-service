@@ -23,4 +23,8 @@ public class UserService {
         return userRepository.findById(userId).orElse(null);
     }
 
+    public User findByUsername(String username) {
+        // TBD
+        return  null;
+    }
 }

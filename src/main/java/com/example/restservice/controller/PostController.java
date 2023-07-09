@@ -25,7 +25,7 @@ public class PostController {
             postDto.setUserId(post.getUserId());
             postDto.setContent(post.getContent());
             postDto.setImgUrl(post.getImgUrl());
-            postDto.setCreatedAt(post.getCreatedAt());
+            postDto.setTimestamp(post.getTimestamp());
 
             return ResponseEntity.ok(postDto);
     }

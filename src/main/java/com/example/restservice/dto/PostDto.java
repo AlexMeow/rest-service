@@ -56,11 +56,11 @@ public class PostDto {
         this.imgUrl = imgUrl;
     }
 
-    public Date getCreatedAt() {
+    public Date getTimestamp() {
         return this.createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setTimestamp(Date createdAt) {
         this.createdAt = createdAt;
     }
 

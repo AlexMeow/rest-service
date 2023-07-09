@@ -43,7 +43,7 @@ public class Post {
         return this.imgUrl;
     }
 
-    public Date getCreatedAt() {
+    public Date getTimestamp() {
         return this.createdAt;
     }
 }
